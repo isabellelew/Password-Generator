@@ -23,9 +23,9 @@ else {
   var specialCharactersChoice = confirm("Would your password to include special characters? (i.e. !@#$%)");
 }
 
-if (lowerCaseChoice === confirm && upperCaseChoice === confirm && numbersChoice === confirm && specialCharactersChoice === confirm) {
-  var generatePassword = 
-}
+// if (lowerCaseChoice === confirm && upperCaseChoice === confirm && numbersChoice === confirm && specialCharactersChoice === confirm) {
+//   var generatePassword = 
+// }
 
 }
 
