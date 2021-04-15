@@ -8,7 +8,6 @@ var chosenCharacters = [];
 
 var generateBtn = document.querySelector("#generate");
 
-// When page loads, user will be alerted to click Generate Password button
 this.onload = alert("Please click 'Generate password' to start!");
 
 // When user clicks Generate Password button, generatePassword function will run
@@ -46,10 +45,17 @@ else {
   // If user does not select any character types, they will be prompted to start over
   if(chosenCharacters.length===0) {
     alert("Uh oh! You did not select any character types. Please start again.");  
+  } 
+
+  for (var i="0"; i<chosenLength; i++) {
+   var randomPassword = chosenCharacters[Math.floor(Math.random()*chosenCharacters.length)];
+   password = randomPassword;
+  }
+
+  console.log(password);
   }
 }
-console.log(password);
-};
+
 
 function writePassword() {
   var password = generatePassword();
