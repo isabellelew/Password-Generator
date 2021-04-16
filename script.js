@@ -49,7 +49,7 @@ else {
 
   
   password = chosenCharacters[Math.floor(Math.random()*chosenCharacters.length)];
-  alert(password)
+  alert("Your password is " + password)
   }
 }
 
