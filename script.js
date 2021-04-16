@@ -47,10 +47,8 @@ else {
     alert("Uh oh! You did not select any character types. Please start again.");  
   } 
 
-  for (var i="0"; i<chosenLength; i++) {
-   var randomPassword = chosenCharacters[Math.floor(Math.random()*chosenCharacters.length)];
-   password = randomPassword;
-  }
+  
+  password = chosenCharacters[Math.floor(Math.random()*chosenCharacters.length)];
 
   console.log(password);
   }
