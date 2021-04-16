@@ -1,10 +1,10 @@
-// Arrays of all possible character choices, set to variables
+// Global variables
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[", "}", "]", "|", ":", ";", "'", "<", ">", "?", "/", ".", ",", "~", "`"]
 var chosenCharacters = [];
-
+var password = "";
 
 var generateBtn = document.querySelector("#generate");
 
@@ -45,12 +45,23 @@ else {
   // If user does not select any character types, they will be prompted to start over
   if(chosenCharacters.length===0) {
     alert("Uh oh! You did not select any character types. Please start again.");  
-  } 
-
-  
-  password = chosenCharacters[Math.floor(Math.random()*chosenCharacters.length)];
-  alert("Your password is " + password)
   }
+
+// Characters will be chosen at random from a bag containing characters of user's preferences.
+// Loop will begin at index 0 and go up in increments of 1.
+// Each iteration will produce a randomly generated character, which will then be added into the password.=
+// When the loop reaches the user's chosen length, it will end. 
+
+  for (i = 0; i < chosenLength; i++) {
+    characters = chosenCharacters[Math.floor(Math.random()*chosenCharacters.length)];
+    password += characters;
+  }
+
+  // Finally, the function concludes when the password is presented to the user in an alert box!
+  alert("Your password is " + password)
+  console.log(password);
+
+}
 }
 
 
