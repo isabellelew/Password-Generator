@@ -49,8 +49,7 @@ else {
 
   
   password = chosenCharacters[Math.floor(Math.random()*chosenCharacters.length)];
-
-  console.log(password);
+  alert(password)
   }
 }
 
