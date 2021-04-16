@@ -8,11 +8,13 @@ var password = "";
 
 var generateBtn = document.querySelector("#generate");
 
+// When page loads, they will be alerted to click the "generate password" button
 this.onload = alert("Please click 'Generate password' to start!");
 
-// When user clicks Generate Password button, generatePassword function will run
+// When user clicks generate button, generatePassword function will run
 function generatePassword() {
-  // Prompt will ask user to choose a passworth length, which will be stored as a variable
+
+  // Prompt will ask user to choose a passworth length
   var chosenLength = prompt("How many characters would you like your password to be? Please choose a number between 8 and 128.");
 
   // If user chooses an insufficient length, they will be alerted to start over
@@ -48,8 +50,8 @@ else {
   }
 
 // Characters will be chosen at random from a bag containing characters of user's preferences.
-// Loop will begin at index 0 and go up in increments of 1.
-// Each iteration will produce a randomly generated character, which will then be added into the password.=
+// Loop begins at index 0 and goes up in increments of 1.
+// During each iteration, a random character will be picked from the bag, which will then be added into the password.
 // When the loop reaches the user's chosen length, it will end. 
 
   for (i = 0; i < chosenLength; i++) {
@@ -64,13 +66,14 @@ else {
 }
 }
 
-
+// I could not figure out how to get the button to work, so I created an alert above
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
-
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+// I want to give credit to "https://github.com/DariaNau/password-generator-js/blob/master/script.js", whose work taught me so much about JS. At the beginning of the assignment, I was compeletely lost but after spending several hours going through every single piece of her code I was able to fully understand everything in its entirety. 
